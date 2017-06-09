@@ -19,7 +19,7 @@ use Illuminate\Http\Request;
 
 Route::group(['namespace' => 'Api'], function () {
     Route::get('/all-categories','ApiHomeController@allCategories');
+    Route::post('/products-by-category','ApiHomeController@productByCategory');
+
 
 });
-
-

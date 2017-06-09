@@ -26,6 +26,13 @@ class CategoryModel extends Model
     }
 
     /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * Relation category has many products.
+     */
+    public function categoryProducts(){
+        return $this->hasMany('App\Models\ProductModel','cat_id');
+    }
+    /**
      * @param $query
      * @return mixed
      * get category for Normal items
